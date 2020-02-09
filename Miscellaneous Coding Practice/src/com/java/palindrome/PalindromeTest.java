@@ -1,5 +1,6 @@
 package com.java.palindrome;
 
+// Palindrome Program
 
 //https://github.com/nikkisengar/Miscellaneous-Coding-Practice.git
 public class PalindromeTest {
@@ -28,9 +29,5 @@ public class PalindromeTest {
 		
 		String inputString = "aabaa";
 		System.out.println("Is inputString Palindrome: "+checkPalindrome(inputString));
-		
-		
-
 	}
-
 }
