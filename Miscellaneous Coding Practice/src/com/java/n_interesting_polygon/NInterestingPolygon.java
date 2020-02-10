@@ -31,6 +31,7 @@ public class NInterestingPolygon {
 		
 		if(valueOfN>=1 && valueOfN<=Math.pow(10, 4)) {
 			
+			//Logic for finding the area of N-Interesting polygon
 			return ((valueOfN * valueOfN) + (valueOfN-1) * (valueOfN -1)); 
 		}
 		else {
