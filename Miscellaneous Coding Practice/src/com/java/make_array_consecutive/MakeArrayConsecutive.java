@@ -16,6 +16,7 @@ public class MakeArrayConsecutive {
 			
 			difference = (statues[i+1] - statues[i]) - 1;
 			
+			//logic for finding the required number of between two numbers
 			if(difference>=1) {
 				requiredNoOfStatues = requiredNoOfStatues + difference;
 			}
