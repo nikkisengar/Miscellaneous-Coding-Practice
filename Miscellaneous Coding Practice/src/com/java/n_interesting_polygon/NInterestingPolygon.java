@@ -31,7 +31,7 @@ public class NInterestingPolygon {
 		
 		if(valueOfN>=1 && valueOfN<=Math.pow(10, 4)) {
 			
-			return ((int)Math.pow(valueOfN, 2) + (int)Math.pow((valueOfN-1), 2));
+			return ((valueOfN * valueOfN) + (valueOfN-1) * (valueOfN -1));
 		}
 		else {
 			return 0;
