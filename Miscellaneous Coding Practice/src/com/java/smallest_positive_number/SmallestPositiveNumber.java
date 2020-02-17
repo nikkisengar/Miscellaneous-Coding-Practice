@@ -50,7 +50,7 @@ public class SmallestPositiveNumber {
 	}
 	
 	public static void main(String[] args) {
-		int[] a= {1,2,3};
+		int[] a= {1,3,7,-9,-2};
 		System.out.println("Smallest Positive Number is: "+smallestPositiveNumber(a));
 	}
 }
