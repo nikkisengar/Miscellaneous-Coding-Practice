@@ -49,5 +49,8 @@ public class NInterestingPolygon {
 		
 		//displaying the area of N-Interesting Polygon
 		System.out.println("Area of "+valueOfN+"-Interesting Polygon is: "+nInterestingPolygonArea(valueOfN));
+		
+		//closing the stream
+		sc.close();
 	}
 }
