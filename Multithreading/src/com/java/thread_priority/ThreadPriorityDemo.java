@@ -11,7 +11,11 @@ public class ThreadPriorityDemo {
 
 	public static void main(String[] args) {
 		
+		SecurityManager security = System.getSecurityManager();
+		System.out.println(security);
+		
 		System.out.println("System cores: "+Runtime.getRuntime().availableProcessors());
+		
 		
 		System.out.println("main Thread priority: "+Thread.currentThread().getPriority()+"\n");
 		
