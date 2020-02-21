@@ -1,5 +1,9 @@
 package com.java.thread_join_method;
 
+
+/* join() method of Thread class is used when a thread t1 wants to wait for a thread t2 until its completion.
+ * Please note that join() method throws InterruptedException.
+ */
 class MyJoin extends Thread {
 	public void run() {
 		for (int i = 0; i < 5; i++) {
