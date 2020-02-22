@@ -1,6 +1,13 @@
 package com.java.tread_interrupt_method;
 
 
+/*
+ * A thread can interrupt a sleeping or a waiting thread by using interrupt() method of the thread class
+ * 
+ * syntax: public void interrupt()
+ *   
+ */
+
 class MyInterrupted extends Thread{
 	public void run() {
 		try {

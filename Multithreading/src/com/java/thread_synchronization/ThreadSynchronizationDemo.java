@@ -1,7 +1,7 @@
 package com.java.thread_synchronization;
 
 class Display{
-	public void wish(String name) {
+	public synchronized void wish(String name) {
 		for(int i=0;i<4;i++) {
 			System.out.print("Good Morning:");
 			try {
