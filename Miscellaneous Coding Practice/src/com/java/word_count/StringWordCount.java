@@ -51,7 +51,7 @@ public class StringWordCount {
 
     public static void main(String[] args) {
         //String str="We test coders. Give us a try?";
-    	String str="Hello there! we are going to see how to link project in eclipse with GIT.";
+    	String str="Hello there!!we are going to?see how to link project in eclipse with GIT.";
         System.out.println("Maximum words in a sentence is: "+stringCount(str));
         
     }
