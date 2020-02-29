@@ -2,6 +2,11 @@ package com.java.thread_atomic_integer;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/*
+ * One way to resolve the Atomicity problem is that to use synchronized keyword
+ * but using synchronization brings performance problem
+ */
 class AtomicIntegerValue {
 	private int value = 1;
 	
