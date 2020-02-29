@@ -15,7 +15,7 @@ class DisplayResult{
 	}
 	
 	public synchronized void displayC() {
-		System.out.println("displayC-"+Thread.currentThread().getName());
+		System.out.println("\ndisplayC-"+Thread.currentThread().getName());
 		for (int i = 65; i <= 75; i++) {
 			System.out.print((char)i);
 			try {
