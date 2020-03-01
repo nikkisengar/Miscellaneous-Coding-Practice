@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 /*
- * One way to resolve the Atomicity problem is that to use synchronized keyword
+ * One way to resolve the atomicity problem is that to use synchronized keyword
  * but using synchronization brings performance problem
  */
 class AtomicIntegerValue {
