@@ -21,6 +21,8 @@ public class OverridingThreadStartMethod {
 	public static void main(String[] args) {
 		
 		OverridingStartMethod t=new OverridingStartMethod();
+		
+		//Thread t1=new OverridingStartMethod();
 		t.start();
 		
 		System.out.println("main thread");

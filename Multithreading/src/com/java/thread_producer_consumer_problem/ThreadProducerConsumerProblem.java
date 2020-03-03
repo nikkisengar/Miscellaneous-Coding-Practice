@@ -52,10 +52,13 @@ class PC {
 				//to insert the job in the list
 				list.add(value++);
 				
+				System.out.println("Items present in the list/queue: "+list+"\n");
+				
 				//notify the consumer thread that it can start consuming now
 				notify();
 				
 				Thread.sleep(1000);
+				System.out.println(Thread.currentThread().getName()+" completed task-"+value);
 			}
 		}
 	}
@@ -74,12 +77,15 @@ class PC {
 				//to consume the item from the list we need to remove the first item from the list
 				int val=list.removeFirst();
 				
+				System.out.println("Items left in the list/queue: "+list+"\n");
+				
 				System.out.println("Consumer consumed-"+val);
 				
 				//notify producer thread that the queue/list is now empty you can produce the item
 				notify();
 				
 				Thread.sleep(1000);
+				System.out.println(Thread.currentThread().getName()+" completed task-"+val);
 			}
 		}
 	}

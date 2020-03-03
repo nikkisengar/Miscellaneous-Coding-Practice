@@ -2,8 +2,12 @@ package com.java.thread_implemention;
 
 class ExtendingThread extends Thread{
 	public void run() {
-		for(int i=0;i<5;i++)
+		for(int i=0;i<8;i++)
 			System.out.println("Child Thread");
+	}
+	
+	public void run(int i) {
+		System.out.println(i);
 	}
 }
 
@@ -14,11 +18,15 @@ public class ThreadImplementationByExtendingThreadClass {
 		ExtendingThread t=new ExtendingThread();
 		
 		t.start();
-		
-		for(int i=0;i<5;i++) {
+		t.run(10);
+		for(int i=0;i<8;i++) {
 			System.out.println("Main Thread");
 		}
 
+	}
+	
+	public static void main() {
+		System.out.println("no-arg main() method");
 	}
 
 }
