@@ -29,8 +29,9 @@ public class ThreadPriorityDemo {
 		//changing the default priority for the main thread
 		Thread.currentThread().setPriority(7);
 		MyThread t=new MyThread();
+		System.out.println("Default priority of t: "+t.getPriority());
 		
-		//t.setPriority(7);
+		t.setPriority(10);
 		
 		//We should not exceed the allowed values range which is 1 to 10 otherwise we will get IllegalArgumentException 
 		//t.setPriority(18);
