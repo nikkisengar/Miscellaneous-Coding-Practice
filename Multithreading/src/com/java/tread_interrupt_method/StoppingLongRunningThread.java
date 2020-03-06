@@ -43,7 +43,7 @@ public class StoppingLongRunningThread {
 		t1.start();
 
 		// after some time
-		// Thread.sleep(2000);
+		//Thread.sleep(2000);
 
 		// changed my mind to stop the child thread
 		//it will set the interrupt flag as true for the thread t1
