@@ -2,10 +2,10 @@ package com.java.thread_synchronized_block;
 
 class DisplayBlock{
 	public void wish(String name) {
-		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//suppose 1 lakh lines of code
+		System.out.println(Thread.currentThread().getName()+" said hii..");;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//suppose 1 lakh lines of code
 		int x=10;
 		System.out.println("Current Value of x: "+x);
-		synchronized (this) {
+		synchronized (DisplayBlock.class) {
 			for (int i = 0; i < 4; i++) {
 				System.out.print("Good Morning:");
 
@@ -20,7 +20,7 @@ class DisplayBlock{
 		
 		System.out.println("Changed value of x: "+(++x));
 		
-		;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//suppose 1 lakh lines of code
+		System.out.println(Thread.currentThread().getName()+" said bye..");;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//suppose 1 lakh lines of code
 	}
 }
 
