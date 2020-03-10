@@ -3,16 +3,52 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<script type="text/javascript">
+		function validate(frm) {
+
+			var name;
+			var age;
+
+			//read form data
+			name = frm.pName.value;
+			age = frm.pAge.value;
+
+			//client side validation logic
+			if (name == "") {
+				alert("Person Name is required...");
+				frm.pName.focus();
+				return false;
+			}
+			if (age == "") {
+				alert("Person Age is required...");
+				frm.pAge.focus();
+				return false;
+			} else {
+				if (isNaN(age)) {
+					alert("Person age is not a number...");
+					frm.pAge.focus();
+					frm.pAge.value = "";
+					return false;
+				}
+			}
+			return true;
+		}
+	</script>
+
 </head>
 <body>
 
 	<h1>User Authentication:</h1>
 	<br>
 	<br>
-	<form action="validate" method="post">
-		UserName: <input type="text" name="username" /><br>
-		<br> Password: <input type="password" name="password" /><br>
+	<form action="validate" method="post" onsubmit="return validate(this)">
+		<label>UserName:</label> <input type="text" name="username"
+			required="required" /><br> <br> <label for="pwd">Password:</label>
+		<input type="password" id="pwd" name="password" pattern=".{3,}"
+			title="Three or more characters" required="required"><br>
 		<br> <input type="submit" value="submit" />
 	</form>
+
 </body>
 </html>
