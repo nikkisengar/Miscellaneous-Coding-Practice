@@ -31,7 +31,7 @@ public class Welcome extends HttpServlet {
 		
 		pw.println("Welcome, "+userName);
 		
-		pw.println("<br><a href='index.html'>Home</a>");
+		pw.println("<br><br><a  style='text-decoration:none;color:red' href='index.html'>Home</a>");
 		
 		pw.close();
 	}

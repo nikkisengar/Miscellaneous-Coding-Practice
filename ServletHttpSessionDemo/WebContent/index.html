@@ -4,37 +4,37 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
-<script type="text/javascript">
-		function validate(frm) {
+<!-- <script type="text/javascript">
+	function validate(frm) {
 
-			var name;
-			var age;
+		var name;
+		var age;
 
-			//read form data
-			name = frm.pName.value;
-			age = frm.pAge.value;
+		//read form data
+		name = frm.pName.value;
+		age = frm.pAge.value;
 
-			//client side validation logic
-			if (name == "") {
-				alert("Person Name is required...");
-				frm.pName.focus();
-				return false;
-			}
-			if (age == "") {
-				alert("Person Age is required...");
-				frm.pAge.focus();
-				return false;
-			} else {
-				if (isNaN(age)) {
-					alert("Person age is not a number...");
-					frm.pAge.focus();
-					frm.pAge.value = "";
-					return false;
-				}
-			}
-			return true;
+		//client side validation logic
+		if (name == "") {
+			alert("Person Name is required...");
+			frm.pName.focus();
+			return false;
 		}
-	</script>
+		if (age == "") {
+			alert("Person Age is required...");
+			frm.pAge.focus();
+			return false;
+		} else {
+			if (isNaN(age)) {
+				alert("Person age is not a number...");
+				frm.pAge.focus();
+				frm.pAge.value = "";
+				return false;
+			}
+		}
+		return true;
+	}
+</script> -->
 
 </head>
 <body>
@@ -42,13 +42,34 @@
 	<h1>User Authentication:</h1>
 	<br>
 	<br>
-	<form action="validate" method="post" onsubmit="return validate(this)">
-		<label>UserName:</label> <input type="text" name="username"
-			required="required" /><br> <br> <label for="pwd">Password:</label>
-		<input type="password" id="pwd" name="password" pattern=".{3,}"
-			title="Three or more characters" required="required"><br>
-		<br> <input type="submit" value="submit" />
+	<!-- 
+	//Html Pattern to Identify if the username is alphanumeric or not
+	pattern="[a-zA-Z][a-zA-Z0-9\s]*" -->
+	<form action="validate" method="post" onsubmit="return isAlphaNumeric(this)">
+		<label>Username:</label> <input type="text" name="username"
+			required="required" pattern="[a-zA-Z][a-zA-Z0-9\s]*" title="Username should be Alphanumeric" /><br> <br> <label
+			for="pwd">Password:</label> <input type="password" id="pwd"
+			name="password" pattern=".{3,}" title="Password should be Three or more characters long"
+			required="required"><br> <br> <input type="submit"
+			value="submit" />
 	</form>
+
+	<!-- JavaScript code to verify the if the username is alphanumeric or not  
+	<script type="text/javascript">
+		function isAlphaNumeric(str) {
+			var code, i, len;
+
+			for (i = 0, len = str.length; i < len; i++) {
+				code = str.charCodeAt(i);
+				if (!(code > 47 && code < 58) && // numeric (0-9)
+				!(code > 64 && code < 91) && // upper alpha (A-Z)
+				!(code > 96 && code < 123)) { // lower alpha (a-z)
+					return false;
+				}
+			}
+			return true;
+		};
+	</script> -->
 
 </body>
 </html>

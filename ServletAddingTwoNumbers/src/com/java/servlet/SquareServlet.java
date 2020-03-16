@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class SquareServlet extends HttpServlet {
 
@@ -19,8 +20,18 @@ public class SquareServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//taking the add result from the AddServlet
-		int result = Integer.parseInt(req.getParameter("addResult"));
+		HttpSession session=req.getSession();
+		
+		int result = (int) session.getAttribute("result");
+		
+		/*
+		 * Approach 1: 
+		 * ----------- 
+		 * taking the add result from the AddServlet
+		 * int result = Integer.parseInt(req.getParameter("addResult"));
+		 * 
+		 */
+		
 
 		result = result * result;
 		

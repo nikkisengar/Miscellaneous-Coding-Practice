@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 
@@ -55,11 +56,27 @@ public class AddServlet extends HttpServlet {
 
 		int addResult = firstNumber + secondNumber;
 
-		// Sending the data to other servlet is called session management
-		// redirecting the addition result to SquareServlet using URL rewriting
-		//URL Rewriting is one of the way of Session Management
+		/*
+		 * 1st Approach:
+		 * -------------
+		 * // Sending the data to other servlet is called session management 
+		 * // redirecting the addition result to SquareServlet using URL rewriting 
+		 * //URL Rewriting is one of the way of Session Management
+		 * resp.sendRedirect("sq?addResult="+addResult);//URL Rewriting
+		 */		
 		
-		resp.sendRedirect("sq?addResult="+addResult);//URL Rewriting
+		/*
+		 * 2nd Approach: 
+		 * -------------
+		 * // Using HttpSession to send the data from one servlet to another servlet
+		 * // HttpSession contains a method called setAttribute(key, value)
+		 * 
+		 */
+		
+		HttpSession session = req.getSession();
+		session.setAttribute("result", addResult);
+		
+		resp.sendRedirect("sq");
 		
 		PrintWriter out = resp.getWriter();
 		out.println("<h1 style='color:red'>Result is: "+addResult+"</h1>");
