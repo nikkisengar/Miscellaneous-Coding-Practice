@@ -1,6 +1,6 @@
 package com.java.iteratorproject;
 
-public interface ChannelIterator {
+public interface IChannelIterator {
 	
 	public boolean hasNext();
 	

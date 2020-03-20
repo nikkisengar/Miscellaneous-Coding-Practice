@@ -1,10 +1,10 @@
 package com.java.iteratorproject;
 
-public interface ChannelCollection {
+public interface IChannelCollection {
 	
 	public void addChannel(Channel c);
 	
 	public void removeChannel(Channel c);
 	
-	public ChannelIterator iterator(ChannelTypeEnum type);
+	public IChannelIterator iterator(ChannelTypeEnum type);
 }

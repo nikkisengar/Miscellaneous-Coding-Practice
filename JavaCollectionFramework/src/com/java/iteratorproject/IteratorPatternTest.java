@@ -5,30 +5,30 @@ public class IteratorPatternTest {
 	public static void main(String[] args) {
 		
 		// adding the Channels to the custom collection
-		ChannelCollection channelCollection = populateChannels();
+		IChannelCollection channelCollection = populateChannels();
 		
 		// iterating over the custom collection using custom iterator
-		ChannelIterator baseIterator = channelCollection.iterator(ChannelTypeEnum.ALL);
+		IChannelIterator baseIterator = channelCollection.iterator(ChannelTypeEnum.ALL);
 		while(baseIterator.hasNext()) {
 			Channel c=baseIterator.next();
 			System.out.println(c.toString());
 		}
 		
-		System.out.println("*************************************");
+		System.out.println("***************************************");
 		
 		// Channel Type Iterator
-		ChannelIterator englisIterator = channelCollection.iterator(ChannelTypeEnum.ENGLISH);
+		IChannelIterator englisIterator = channelCollection.iterator(ChannelTypeEnum.ENGLISH);
 		while(englisIterator.hasNext()) {
 			Channel c=englisIterator.next();
 			System.out.println(c.toString());
 		}
 	}
 
-	public static ChannelCollection populateChannels() {
+	public static IChannelCollection populateChannels() {
 
-		ChannelCollection channelCollection = new ChannelCollectionImpl();
+		IChannelCollection channelCollection = new ChannelCollectionImpl();
 		
-		channelCollection.addChannel(new Channel(98.5, ChannelTypeEnum.TELUGU));
+		channelCollection.addChannel(new Channel(98.3, ChannelTypeEnum.TELUGU));
 		channelCollection.addChannel(new Channel(94.3, ChannelTypeEnum.HINDI));
 		channelCollection.addChannel(new Channel(93.4, ChannelTypeEnum.TAMIL));
 		channelCollection.addChannel(new Channel(100.5, ChannelTypeEnum.MARATHI));

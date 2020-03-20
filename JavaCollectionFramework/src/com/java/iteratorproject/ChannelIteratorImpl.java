@@ -3,7 +3,7 @@ package com.java.iteratorproject;
 import java.util.List;
 
 // custom iterator class
-public class ChannelIteratorImpl implements ChannelIterator {
+public class ChannelIteratorImpl implements IChannelIterator {
 
 	private ChannelTypeEnum type;
 	private List<Channel> channelsList;

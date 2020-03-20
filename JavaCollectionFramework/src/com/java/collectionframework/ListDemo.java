@@ -1,29 +1,25 @@
 package com.java.collectionframework;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListDemo {
 
 	public static void main(String[] args) {
-		/*List<String> lst = new ArrayList<String>();
-		lst.add("Mercury");
-		lst.add("Venus");
-		lst.add("Earth");
-		lst.add("JavaSoft");
-		lst.add("Mars");
-		lst.add("Jupiter");
-		lst.add("Saturn");
-		lst.add("Uranus");
-		lst.add("Neptune");
-		lst.add("Pluto");
+		/*
+		 * List<String> lst = new ArrayList<String>(); lst.add("Mercury");
+		 * lst.add("Venus"); lst.add("Earth"); lst.add("JavaSoft"); lst.add("Mars");
+		 * lst.add("Jupiter"); lst.add("Saturn"); lst.add("Uranus"); lst.add("Neptune");
+		 * lst.add("Pluto");
+		 * 
+		 * System.out.println("Planets Name: "+lst);
+		 */
 
-		System.out.println("Planets Name: "+lst);*/
-		
-		List<Integer> list=new ArrayList<Integer>();
-		List<Integer> list1=new ArrayList<Integer>();
-		
-		//add(-) method
+		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list1 = new ArrayList<Integer>();
+
+		// add(-) method
 		list.add(97);
 		list.add(20);
 		list.add(136);
@@ -33,25 +29,25 @@ public class ListDemo {
 		list.add(55);
 		list.add(35);
 		list.add(100);
-		
-		System.out.println("Original list: "+list);
-		
-		//addAll(-) method
+
+		System.out.println("Original list: " + list);
+
+		// addAll(-) method
 		list1.addAll(list);
-		System.out.println("Original list1: "+list);
-		for (int i:list) {
-			if(i%2==0)
-				System.out.print(i+"  ");
+		System.out.println("Original list1: " + list);
+		for (int i : list) {
+			if (i % 2 == 0)
+				System.out.print(i + "  ");
 		}
 		System.out.println();
-		//contains(-) method
-		System.out.println("Is 100 in the list: "+list.contains(100));
-		System.out.println("Is 100 in the list1: "+list.contains(100));
-		System.out.println("Size of list: "+list.size());
-		System.out.println("Size of list1: "+list.size());
-		System.out.println("Is list1 contains list: "+list1.containsAll(list));
-		
-		list.forEach(l->System.out.print(l+" "));
+		// contains(-) method
+		System.out.println("Is 100 in the list: " + list.contains(100));
+		System.out.println("Is 100 in the list1: " + list.contains(100));
+		System.out.println("Size of list: " + list.size());
+		System.out.println("Size of list1: " + list.size());
+		System.out.println("Is list1 contains list: " + list1.containsAll(list));
+
+		list.forEach(l -> System.out.print(l + " "));
 		System.out.println();
 		list1.clear();
 		System.out.println(list1.contains(90));
@@ -61,9 +57,22 @@ public class ListDemo {
 		System.out.println(list.lastIndexOf(55));
 		list.removeAll(list1);
 		System.out.println(list.remove(2));
-		System.out.println(list.remove(20));
-		
-		
-		
+		//System.out.println(list.remove(20));
+
+		list.addAll(3, list1);
+
+		System.out.println("\n Updated List: " + list);
+
+		List<String> names = new ArrayList<String>();
+		List<String> names1 = new ArrayList<String>();
+
+		Collections.addAll(names, "A", "B", "C", "D");
+
+		names1.add("E");
+		names1.add("F");
+		names1.add("G");
+		names1.add(2, "H");
+		names1.addAll(1, names);
+		System.out.println("Names1 are: "+names1);
 	}
 }

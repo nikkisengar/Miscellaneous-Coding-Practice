@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Custom collection class
-public class ChannelCollectionImpl implements ChannelCollection {
+public class ChannelCollectionImpl implements IChannelCollection {
 
 	
 	private List<Channel> channelsList;
@@ -26,7 +26,7 @@ public class ChannelCollectionImpl implements ChannelCollection {
 	
 	// type coming from ChannelTypeEnum
 	@Override
-	public ChannelIterator iterator(ChannelTypeEnum type) {
+	public IChannelIterator iterator(ChannelTypeEnum type) {
 		return new ChannelIteratorImpl(type, channelsList);
 	}
 }
