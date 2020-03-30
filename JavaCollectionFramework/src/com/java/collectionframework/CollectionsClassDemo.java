@@ -76,7 +76,7 @@ public class CollectionsClassDemo {
 
 		System.out.println("Content of checkedList: " + checkedList);
 
-		// We can any type of element to the numberList
+		// We can add any type of element to the numberList
 		numberList.add(10);
 
 		System.out.println("Updated numberList: " + numberList);
