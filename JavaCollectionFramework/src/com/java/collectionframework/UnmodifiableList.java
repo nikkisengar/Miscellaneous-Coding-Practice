@@ -29,11 +29,19 @@ public class UnmodifiableList {
 
 		System.out.println("List from array: " + listFromArray);
 
+		
+		//Another way
 		List<String> unmodifiableListFromArray = Collections.unmodifiableList(listFromArray);
 
 		//unmodifiableListFromArray.add("Four");//RE: java.lang.UnsupportedOperationException
 
 		System.out.println("Unmodifiable List from array: " + unmodifiableListFromArray);
+		
+		// 2nd approach (Java 9)
+		List<String> fruits = new ArrayList<String>(Arrays.asList("Apple","Banana","Cherry"));
+		System.out.println("list1: " + fruits);
+		
+		//List<String> unmodifiableFruits = List.of();
 
 	}
 
