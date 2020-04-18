@@ -22,11 +22,11 @@ class CallableDemo implements Callable<Integer> {
 public class ThreadCallableDemo {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		
-		ExecutorService service=Executors.newFixedThreadPool(10);
-		
-		CallableDemo c=new CallableDemo();
-		
+
+		ExecutorService service = Executors.newFixedThreadPool(10);
+
+		CallableDemo c = new CallableDemo();
+
 		service.submit(c).get();
 		System.out.println(service.submit(c).get());
 	}
